@@ -38,8 +38,6 @@ jobs:
         uses: actions/checkout@v4.1.7      
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Metrics embed
-        uses: lowlighter/metrics@v3.34   
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.2
       - name: Build and push Docker images
