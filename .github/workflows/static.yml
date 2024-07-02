@@ -42,7 +42,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          gem install bundler
+          gem install bundler -v 2.2.33 # Install a compatible version of bundler
           bundle install
 
       - name: Build site
@@ -52,7 +52,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-          
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
