@@ -40,8 +40,6 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.2
-      - name: Build and push Docker images
-        uses: docker/build-push-action@v6.2.0
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.6.1      
       - name: yq - portable yaml processor
