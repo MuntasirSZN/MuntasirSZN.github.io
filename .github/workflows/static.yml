@@ -41,3 +41,31 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Checkout
+        uses: actions/checkout@v4.1.7      
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+      - name: Metrics embed
+        uses: lowlighter/metrics@v3.34   
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.2
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v6.2.0
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.6.1  
+      - name: yq - portable yaml processor
+        uses: mikefarah/yq@v4.44.2
+      - name: Cache
+        uses: actions/cache@v4.0.2
+      - name: SSH Remote Commands
+        uses: appleboy/ssh-action@v1.0.3
+      - name: Super-Linter
+        uses: super-linter/super-linter@v6.6.0
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v4.0.0          
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@v3.79.0
+      - name: OpenCommit — improve commits with AI 🧙
+        uses: di-sukharev/opencommit@github-action-v1.0.2
